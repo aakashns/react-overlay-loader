@@ -1,0 +1,21 @@
+@keyframes react-overlay-loader-spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.react-overlay-loader-spinner:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -30px;
+  margin-left: -20px;
+  border-radius: 50%;
+  border: 3px solid #eee;
+  border-top-color: #07d;
+  animation: react-overlay-loader-spinner 0.8s linear infinite;
+}

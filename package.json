@@ -5,7 +5,13 @@
   "main": "lib/index.js",
   "module": "dist/index.esm.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest src --coverage",
+    "init": "mkdir dist",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean && npm run init",
+    "build": "NODE_ENV=production rollup -c && BABEL_ENV=commonjs babel src --out-dir lib",
+    "prepublishOnly": "npm run test && npm run build",
+    "dev": "rollup -c -w"
   },
   "files": [
     "dist",
@@ -17,12 +23,14 @@
     "url": "git+https://github.com/aakashns/react-overlay-loader.git"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^21.0.2",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^4.6.1",
     "eslint-config-react-app": "^2.0.0",
     "eslint-plugin-flowtype": "^2.35.1",
