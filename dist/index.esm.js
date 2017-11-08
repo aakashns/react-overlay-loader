@@ -38,7 +38,7 @@ var Loader = function Loader(_ref) {
   return createElement(
     "div",
     { style: mergedContainerStyle },
-    createElement("div", { className: "spinner" }),
+    createElement("div", { className: "react-overlay-loader-spinner" }),
     createElement(
       "span",
       { style: _extends({}, styles.text, textStyle) },
