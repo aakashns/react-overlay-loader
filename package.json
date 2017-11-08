@@ -1,6 +1,6 @@
 {
   "name": "react-overlay-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple spinner/loader with a background overlay",
   "main": "lib/index.js",
   "module": "dist/index.esm.js",
