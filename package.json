@@ -1,6 +1,6 @@
 {
   "name": "react-overlay-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple spinner/loader with a background overlay",
   "main": "lib/index.js",
   "module": "dist/index.esm.js",
@@ -9,12 +9,16 @@
     "init": "mkdir dist",
     "clean": "rm -rf dist",
     "prebuild": "npm run clean && npm run init",
-    "build":
-      "NODE_ENV=production rollup -c && BABEL_ENV=commonjs babel src --out-dir lib",
+    "build": "NODE_ENV=production rollup -c && BABEL_ENV=commonjs babel src --out-dir lib",
     "prepublishOnly": "npm run test && npm run build",
     "dev": "rollup -c -w"
   },
-  "files": ["dist", "src", "lib", "styles.css"],
+  "files": [
+    "dist",
+    "src",
+    "lib",
+    "styles.css"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aakashns/react-overlay-loader.git"
@@ -48,7 +52,13 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
-  "keywords": ["react", "loader", "spinner", "overlay", "component"],
+  "keywords": [
+    "react",
+    "loader",
+    "spinner",
+    "overlay",
+    "component"
+  ],
   "author": "Aakash N S",
   "license": "MIT",
   "bugs": {
