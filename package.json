@@ -48,7 +48,7 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^2.0.1"
   },
-  "peerDependencies": {
+  "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
